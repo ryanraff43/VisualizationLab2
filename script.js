@@ -1,5 +1,5 @@
 let attractions;
-fetch('/attractions.json')
+fetch('/VisualizationLab2/attractions.json')
     .then(response => response.json())
     .then(data => {
         attractions = data;
@@ -21,7 +21,7 @@ category.addEventListener('change', function(){
 
 function filterData(category) {
 
-	if (category&&category == 'all') {
+	if (category == 'all') {
         let top5attractions = attractions.slice(0, 5);
         renderBarChart(top5attractions);
         return;
