@@ -21,7 +21,7 @@ category.addEventListener('change', function(){
 
 function filterData(category) {
 
-	if (category == 'all') {
+	if (category&&category == 'all') {
         let top5attractions = attractions.slice(0, 5);
         renderBarChart(top5attractions);
         return;
